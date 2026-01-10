@@ -8,6 +8,7 @@
         h1 { color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 10px; }
         .card { background: #161b22; border: 1px solid #30363d; padding: 25px; border-radius: 8px; margin-top: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
         .status { color: #d29922; font-weight: bold; background: #21262d; padding: 2px 8px; border-radius: 4px; }
+        .success { color: #3fb950; font-weight: bold; background: #21262d; padding: 2px 8px; border-radius: 4px; }
         a { color: #58a6ff; text-decoration: none; font-weight: bold; }
         a:hover { text-decoration: underline; }
         ul { list-style-type: '🛰️ '; }
@@ -26,11 +27,12 @@
 
     <div class="card">
         <h3>📊 Registro de Misiones</h3>
-        <p>Estado actual: <span class="status">RE-PROCESANDO DATOS IQ</span></p>
+        <p>Seleccione una misión para ver el reporte detallado:</p>
         <ul>
-            <li><b>MIT RF-Challenge (QPSK):</b> En espera de re-escaneo.</li>
-            <li><b>Technosat (GFSK):</b> En espera de validación de bitstream.</li>
-            <li><b>DJI Inspire 2 (SIGINT):</b> En espera de análisis de ráfagas.</li>
+            <li><a href="mission_mit_0154.html"><b>MIT RF-Challenge (QPSK):</b> <span class="success">VER REPORTE DE MISIÓN →</span></a></li>
+            <br>
+            <li><b>Technosat (GFSK):</b> <span class="status">EN ESPERA DE VALIDACIÓN</span></li>
+            <li><b>DJI Inspire 2 (SIGINT):</b> <span class="status">EN ESPERA DE ANÁLISIS</span></li>
         </ul>
     </div>
 
