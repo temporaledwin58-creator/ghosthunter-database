@@ -14,9 +14,9 @@
         .evidence-text { background: #0d1117; color: #3fb950; padding: 15px; border-radius: 8px; border: 1px solid #30363d; font-family: monospace; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }
         .btn { display: inline-block; background: #238636; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; margin: 5px 5px 5px 0; font-weight: bold; transition: background 0.3s; }
         .btn:hover { background: #2ea043; }
-        .btn-secondary { background: #30363d; }
+        .btn-secondary { background: #30363d; color: white; }
         .btn-secondary:hover { background: #3c444d; }
-        .btn-satnogs { background: #1f6feb; } /* Color azul para destacar link externo */
+        .btn-satnogs { background: #1f6feb; } 
         .btn-satnogs:hover { background: #388bfd; }
     </style>
 </head>
@@ -53,9 +53,11 @@
 
         <div class="card">
             <h3>📦 Archivos de Misión y Verificación</h3>
-            <a href="database/mission_002/technosat_spikes_v39.csv" class="btn">Descargar Spikes CSV</a>
-            <a href="database/mission_002/technosat_binary_trama.bin" class="btn">Descargar Trama Binary</a>
-            <a href="database/mission_002/technosat_clean_morse.txt" class="btn btn-secondary">Ver Rescate Morse</a>
+            <a href="database/technosat_raw_signal.ogg" class="btn">Descargar IQ Crudo</a>
+            <a href="database/technosat_spikes_v39.csv" class="btn">Descargar Spikes CSV</a>
+            <a href="database/technosat_raw_bitstream.txt" class="btn">Descargar bitstream</a>
+            
+            <a href="research/technosat_clean_morse.txt" class="btn btn-secondary">Ver Rescate Morse</a>
             <a href="https://network.satnogs.org/observations/13176907/" target="_blank" class="btn btn-satnogs">🔗 Ver en SatNOGS Network</a>
         </div>
     </div>
