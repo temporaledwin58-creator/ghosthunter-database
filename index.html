@@ -12,6 +12,8 @@
         a { color: #58a6ff; text-decoration: none; font-weight: bold; }
         a:hover { text-decoration: underline; }
         ul { list-style-type: '🛰️ '; }
+        /* Mejora para el botón de contacto */
+        .btn:hover { opacity: 0.9; text-decoration: none !important; transform: scale(1.02); transition: 0.2s; }
     </style>
 </head>
 <body>
@@ -34,6 +36,32 @@
             <li><b>Technosat (GFSK):</b> <span class="status">EN ESPERA DE VALIDACIÓN</span></li>
             <li><b>DJI Inspire 2 (SIGINT):</b> <span class="status">EN ESPERA DE ANÁLISIS</span></li>
         </ul>
+    </div>
+
+    <div class="card" style="border: 1px dashed #58a6ff; margin-top: 40px; background: #1c2128; padding: 25px; border-radius: 8px;">
+        <h3 style="color: #58a6ff; margin-top: 0; display: flex; align-items: center;">
+            <span style="margin-right: 10px;">📩</span> Solicitud de Rescate de Señal (PoC)
+        </h3>
+        <p style="color: #c9d1d9;">¿Tienes una señal satelital o de RF enterrada en el ruido? Puedo ayudarte a recuperarla utilizando el motor neuromórfico <b>Anti-LIF</b>.</p>
+        
+        <div style="background: #0d1117; padding: 20px; border-radius: 6px; font-size: 0.9em; border: 1px solid #30363d;">
+            <p style="color: #58a6ff; font-weight: bold; margin-top: 0;">Para una prueba de concepto (PoC) gratuita:</p>
+            <ul style="list-style: none; padding-left: 0; color: #8b949e;">
+                <li style="margin-bottom: 8px;">🔹 <b>Límite:</b> Máximo 5MB de datos crudos (IQ / SigMF / Wav).</li>
+                <li style="margin-bottom: 8px;">🔹 <b>Info Requerida:</b> Frecuencia, Sample Rate y Modulación estimada.</li>
+                <li style="margin-bottom: 8px;">🔹 <b>Procesamiento:</b> Manual y sujeto a disponibilidad de tiempo.</li>
+            </ul>
+            
+            <a href="mailto:TU_CORREO@DOMINIO.COM?subject=GhostHunter%20PoC%20Request%20-%20[Nombre%20de%20Señal]&body=Nombre%20de%20la%20misión/señal:%0A%0AFrecuencia%20(MHz):%0A%0ASample%20Rate:%0A%0AModulación%20estimada:%0A%0ADescripción%20del%20problema:" 
+               class="btn" 
+               style="background: #238636; color: white; padding: 12px 20px; display: inline-block; border-radius: 6px; text-decoration: none; margin-top: 10px; font-weight: bold; border: 1px solid rgba(240,246,252,0.1);">
+                📧 Enviar Datos para Análisis
+            </a>
+        </div>
+
+        <p style="font-size: 0.8em; color: #8b949e; margin-top: 15px; border-left: 3px solid #d29922; padding-left: 10px;">
+            ⚠️ <b>Nota de Transparencia:</b> Los resultados de las pruebas gratuitas (bitstreams recuperados y reportes) podrán ser publicados en este repositorio como parte del portafolio técnico de <i>GhostHunter Database</i>.
+        </p>
     </div>
 
     <p style="margin-top: 50px; font-size: 0.8em; color: #8b949e;">Propulsado por Spiking Neural Networks | © 2026</p>
