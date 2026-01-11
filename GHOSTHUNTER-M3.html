@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte GhostHunter-M3 | SNN Forensic Analysis</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #0d1117; color: #c9d1d9; padding: 40px; }
+        .container { max-width: 900px; margin: auto; }
+        .back-link { color: #58a6ff; text-decoration: none; margin-bottom: 20px; display: inline-block; }
+        h1 { color: #58a6ff; margin-bottom: 5px; }
+        .mission-id { color: #8b949e; font-size: 1.1em; margin-bottom: 20px; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .stat-box { background: #21262d; padding: 15px; border-radius: 6px; text-align: center; border: 1px solid #30363d; flex: 1; }
+        .stat-val { display: block; font-size: 1.5em; color: #d29922; font-weight: bold; }
+        .evidence-text { background: #0d1117; color: #3fb950; padding: 15px; border-radius: 8px; border: 1px solid #30363d; font-family: monospace; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; line-height: 1.2; }
+        .sensor-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .sensor-table td { padding: 8px; border-bottom: 1px solid #30363d; }
+        .sensor-tag { color: #58a6ff; font-weight: bold; }
+        .btn { display: inline-block; background: #238636; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; margin: 5px 5px 5px 0; font-weight: bold; transition: background 0.3s; }
+        .btn:hover { background: #2ea043; }
+        .btn-secondary { background: #30363d; color: white; }
+        .btn-secondary:hover { background: #3c444d; }
+        .btn-zip { background: #1f6feb; } 
+        .btn-zip:hover { background: #388bfd; }
+        .highlight { color: #d29922; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Volver al Dashboard de GhostHunter</a>
+
+        <h1>🛰️ Misión: GHOSTHUNTER-M3 (Baseband Recovery)</h1>
+        <div class="mission-id">Frecuencia: 435.887 MHz | Target: Digital PIM Burst Satellite</div>
+        
+        <p>Análisis forense de ráfagas de telemetría mediante <b>SNN Anti-LIF v4.0</b>. Extracción de datos en entornos de alta entropía (Noise Floor Penetration).</p>
+
+        <div class="card">
+            <h3>📈 Métricas de Inteligencia (Burst T=59.10s)</h3>
+            <div style="display: flex; justify-content: space-around; gap: 10px;">
+                <div class="stat-box">
+                    <span class="stat-val">99.82%</span>
+                    Sparsity (Noise Rejection)
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">35,511</span>
+                    Neural Spikes (SNN)
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">1333.33 Hz</span>
+                    Baud Rate (Native Clock)
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🖼️ Patrón de Ráfaga Detectado (Payload Extraction)</h3>
+            <div class="evidence-text">
+T+59.10s | ····█··█·█····█···█··································
+T+59.85s | ···························█·······█········███····█
+            </div>
+            <p><small>Firma de telemetría recuperada: <span class="highlight"># R,,@q5</span> - Estructura de trama PIM validada.</small></p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Telemetría de Sensores (Payload Decoded)</h3>
+            <table class="sensor-table">
+                <tr><td class="sensor-tag">Sensor A (Energía)</td><td>240 units</td><td><span class="highlight">Nominal High (94%)</span></td></tr>
+                <tr><td class="sensor-tag">Sensor B (Temperatura)</td><td>216 units</td><td>Exposición Solar Directa</td></tr>
+                <tr><td class="sensor-tag">Sensor C (Inercia)</td><td>161 units</td><td>Estabilidad Nominal</td></tr>
+                <tr><td class="sensor-tag">Sensor D (Estado)</td><td>130 u</td><td>Bus de Datos Activo</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>📦 Archivos de Misión y Evidencia</h3>
+            <a href="database/baseband_435887855Hz_test_ghosthunter.wav" class="btn">IQ Baseband Crudo</a>
+            <a href="database/hallazgos_mision_003.csv" class="btn">Detecciones CSV</a>
+            <a href="database/inteligencia_binaria_mision003.txt" class="btn btn-secondary">Bitstream Sincronizado</a>
+            <a href="database/GHOSTHUNTER_MISSION_003_REPORT.zip" class="btn btn-zip">⬇️ Descargar Reporte Completo (.ZIP)</a>
+        </div>
+    </div>
+</body>
+</html>

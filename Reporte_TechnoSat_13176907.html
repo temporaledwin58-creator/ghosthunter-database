@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte TechnoSat-13176907 | GhostHunter</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #0d1117; color: #c9d1d9; padding: 40px; }
+        .container { max-width: 900px; margin: auto; }
+        .back-link { color: #58a6ff; text-decoration: none; margin-bottom: 20px; display: inline-block; }
+        h1 { color: #58a6ff; }
+        .card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .stat-box { background: #21262d; padding: 15px; border-radius: 6px; text-align: center; border: 1px solid #30363d; flex: 1; }
+        .stat-val { display: block; font-size: 1.5em; color: #d29922; font-weight: bold; }
+        .evidence-text { background: #0d1117; color: #3fb950; padding: 15px; border-radius: 8px; border: 1px solid #30363d; font-family: monospace; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }
+        .btn { display: inline-block; background: #238636; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; margin: 5px 5px 5px 0; font-weight: bold; transition: background 0.3s; }
+        .btn:hover { background: #2ea043; }
+        .btn-secondary { background: #30363d; color: white; }
+        .btn-secondary:hover { background: #3c444d; }
+        .btn-satnogs { background: #1f6feb; } 
+        .btn-satnogs:hover { background: #388bfd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Volver al Dashboard Principal</a>
+
+        <h1>🛰️ Reporte de Misión: TECHNOSAT-13176907</h1>
+        <p>Recuperación de telemetría CW Morse desde Noise Floor utilizando Anti-LIF v3.9.</p>
+
+        <div class="card">
+            <h3>📈 Métricas de Rendimiento (Post-Procesamiento)</h3>
+            <div style="display: flex; justify-content: space-around; gap: 10px;">
+                <div class="stat-box">
+                    <span class="stat-val">97.77%</span>
+                    Sparsity (Noise Rejection)
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">196,450</span>
+                    Neuronal Spikes
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">880,476 bits</span>
+                    Trama (Lock 4800bd)
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🖼️ Evidencia de Recuperación (Envolvente Morse)</h3>
+            <div class="evidence-text">______________________________██████____███████___██████_____________██___________________________██████__________████████__██___███____███████████_____________________________________██_________________________________███████_________________________________________</div>
+            <p><small>Patrón rítmico extraído: <b>[T, U, E, 4, I]</b> - Cabeceras de telemetría validadas por SNN.</small></p>
+        </div>
+
+        <div class="card">
+            <h3>📦 Archivos de Misión y Verificación</h3>
+            <a href="database/technosat_raw_signal.ogg" class="btn">Descargar IQ Crudo</a>
+            <a href="database/technosat_spikes_v39.csv" class="btn">Descargar Spikes CSV</a>
+            <a href="database/technosat_raw_bitstream.txt" class="btn">Descargar bitstream</a>
+            
+            <a href="research/technosat_clean_morse.txt" class="btn btn-secondary">Ver Rescate Morse</a>
+            <a href="https://network.satnogs.org/observations/13176907/" target="_blank" class="btn btn-satnogs">🔗 Ver en SatNOGS Network</a>
+        </div>
+    </div>
+</body>
+</html>
